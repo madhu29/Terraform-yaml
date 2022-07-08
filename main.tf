@@ -12,12 +12,13 @@ terraform {
 provider "azurerm" {
   features {}
  
-subscription_id = "__subscriptionid__"
-client_id       = "__clientid__"
-client_secret   = "__clientsecret__"
-tenant_id       = "__tenantid__"
+#subscription_id = "__subscriptionid__"
+#client_id       = "__clientid__"
+#client_secret   = "__clientsecret__"
+#tenant_id       = "__tenantid__"
 
 }
+data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "rg" {
   name     = "devops_rg"
